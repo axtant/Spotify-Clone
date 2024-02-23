@@ -3,68 +3,124 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Spotify - Your Music Player</title>
-    <link rel="stylesheet" href="stylesheet.css">
+    <title>Spotify - You Say Music</title>
+    <link rel="stylesheet" href="script.css">
     <link rel="icon" href="img/spotifylogo.png">
+    
 </head>
 <body>
-    <nav>
-        <ul>
-            <li class="brand"><img src="img/spotifylogo.png" alt="logo"><a href="https://open.spotify.com/" target="_self">Spotify</a></li>
-            <li><a href="https://axtant.github.io/about-me/">About</a></li>
-        </ul>
-    </nav>
+    <div class="left">
+        <div class="one">
+            <div class="spot">
+                <div class="adjust">
+                    <img src="img/spotifylogo.png" alt="logo"><span>Spotify</span>
+                    <title>Spotify</title>
+                </div>    
+            </div>
+            <ul class="two">
+                <li><img src="img/home.png" alt=""><span>Home</span></li>
+                <li><img src="img/find.png" alt=""><span>Search</span></li>
+            </ul>
+            <div class="leftbootom">
+                <div class="libr">
+                    <img src="img/libr.png" alt=""><span>Your Library</span></div>
 
-    <div class="container">
-        <div class="songList"></div>
-            <div class="songitemContainer">
-                <h1>Current Top Songs</h1>
-                <div class="songItem">
-                    <img src="img/KendrickLamarSwimmingPools.jpg" alt="1">
-                    <span>Swimming Pools (Drank)</span>
-                    <span class="songlistplay"><span class="timestamp">4:07 <i class="fa-solid fa-play fa-s"></i></span></span>
-                </div>                
-                <div class="songItem">
-                    <img src="img/2.jpg" alt="1">
-                    <span>Alag Aasmaan - Cover ft.UwU</span>
-                    <span class="songlistplay"><span class="timestamp">1:13 <i class="fa-solid fa-play fa-s"></i></span></span>
+                <div class="playlist1">
+                    <p>Create your first playlist</p>
+                    <span>Its easy, well help you</span><br>
+                    <button>Creat Playlist</button>
                 </div>
-                <div class="songItem">
-                    <img src="img/3.jpeg" alt="1">
-                    <span>VALENTINO</span>
-                    <span class="songlistplay"><span class="timestamp">2:45 <i class="fa-solid fa-play fa-s"></i></span></span>
+                    
+            </div>
+        </div>
+
+
+        <div class="incon">
+            <header class="top">
+            <div class="button">  
+                <p style="cursor: pointer;">Sign Up</p>
+                <button>Log in</button>    
+            </div>
+            </header>
+
+            <div class="rightBot">
+                <div class="rb1">
+                    <h1>Spotify Songs</h1>
                 </div>
-                <div class="songItem">
-                    <img src="img/4.jpeg" alt="1">
-                    <span>Yes Indeed</span>
-                    <span class="songlistplay"><span class="timestamp">2:22 <i class="fa-solid fa-play fa-s"></i></span></span>
-                </div>
-                <div class="songItem">
-                    <img src="img/5.jpg" alt="1">
-                    <span>Jimmy Cooks (Feat. 21 Savage)</span>
-                    <span class="songlistplay"><span class="timestamp">3:38 <i class="fa-solid fa-play fa-s"></i></span></span>
+                <div class="nav-container">
+                    <nav class="rbPlay">
+                        <div class="image-container">
+                            <audio id="song1" src="songs/1.mp3"></audio>
+                            <img src="img/KendrickLamarSwimmingPools.jpg" alt="">
+                            <img src="img/play.png" alt="Play" class="play-button play-pause-btn" data-songid="song1" onclick="playSong('song1', this)">
+                        </div>
+                        <p>Swimming Pools (Drank)</p>
+                        <p1>Kendrik Lamar</p1>
+                    </nav>
+                    <nav class="rbPlay">
+                        <div class="image-container">
+                            <audio id="song2" src="songs/2.mp3"></audio>
+                            <img src="img/2.jpg" alt="">
+                            <img src="img/play.png" alt="Play" class="play-button play-pause-btn" data-songid="song2" onclick="playSong('song2', this)">
+                        </div>
+                        <p>Alag Aasmaan - ft.UwU</p>
+                        <p1>uwunino</p1>
+                    </nav>
+                    <nav class="rbPlay">
+                        <div class="image-container">
+                            <audio id="song3" src="songs/3.mp3"></audio>
+                            <img src="img/3.jpeg" alt="">
+                            <img src="img/play.png" alt="Play" class="play-button play-pause-btn" data-songid="song3" onclick="playSong('song3', this)">
+                        </div>
+                        <p>VALENTINO</p>
+                        <p1>2k4Goldn</p1>
+                    </nav>
+                    <nav class="rbPlay">
+                        <div class="image-container">
+                            <audio id="song4" src="songs/4.mp3"></audio>
+                            <img src="img/4.jpeg" alt="">
+                            <img src="img/play.png" alt="Play" class="play-button play-pause-btn" data-songid="song4" onclick="playSong('song4', this)">
+                        </div>
+                        <p>Yes Indeed</p>
+                        <p1>Lil Baby, Drake</p1>
+                    </nav>
+                    <nav class="rbPlay">
+                        <div class="image-container">
+                            <audio id="song5" src="songs/5.mp3"></audio>
+                            <img src="img/5.jpg" alt="">
+                            <img src="img/play.png" alt="Play" class="play-button play-pause-btn" data-songid="song5" onclick="playSong('song5', this)">
+                        </div>
+                        <p>Jimmy Cooks (Feat. 21 Savage)</p>
+                        <p1>Drake, 21 Savage</p1>
+                    </nav>
+                    <nav class="rbPlay">
+                        <div class="image-container">
+                            <audio id="song6" src="songs/6.mp3"></audio>
+                            <img src="img/6.jpeg" alt="">
+                            <img src="img/play.png" alt="Play" class="play-button play-pause-btn" data-songid="song6" onclick="playSong('song6', this)">
+                        </div>
+                        <p>Formula</p>
+                        <p1>Labrinth</p1>
+                    </nav>
                 </div>
             </div>
-
-        <div class="songBanner"></div>
+        </div>
     </div>
 
     <div class="bottom">
-        <div class="icons">
-            <i class="fa-solid fa-backward-step fa-lg"></i>
-            <i class="fa-solid fa-play fa-xl"></i>
-            <i class="fa-solid fa-forward-step fa-lg"></i>
-        </div>
-        <input type="range" name="range" id="myProgressBar" min="0" max="100">
-        <div class="nowPlaying" id="nowPlaying">
+        <div class="nowPlaying" id="nowPlaying"> 
             <img src="img/KendrickLamarSwimmingPools.jpg" alt="">
             <p>Swiming Pools (Drank)</p>
         </div>
-        <p id="timeDisplay">0:00 / 0:00</p>
-
+        <div class="bar">
+            <input type="range" name="range" id="myProgressBar" min="0" max="100">   
+        </div>
+        <div class="volume">
+            <label for="volumeControl">Volume</label>
+            <input type="range" id="volumeControl" min="0" max="1" step="0.01" value="0.5" onchange="setVolume(this.value)">
+        </div>
     </div>
     
-    <script src="https://kit.fontawesome.com/3aa5d016b0.js" crossorigin="anonymous"></script>
-    <script src="script.js"></script>
+<script src="script.js"></script>
 </body>
 </html>
